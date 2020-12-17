@@ -21,14 +21,16 @@
 
             <button
                 type="submit"
-                class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white"
+                class="bg-blue-500 rounded-full shadow px-8 text-white h-10"
             >
-                Tweet-a-roo!
+                Publish
             </button>
         </footer>
     </form>
 
     @if ($errors->has('body'))
-        <p class="text-red-500 text-sm mt-2">{{ $errors->first('body') }}</p>
+        <p class="text-red-500 text-sm mt-2">
+            {{ $errors->first('body') }}
+        </p>
     @endif
 </div>
