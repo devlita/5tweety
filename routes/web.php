@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function() {
         //->middleware('can:edit,user')
         ;
 
-    Route::get('/explore', 'ExploreController@index');
+    Route::get('/explore', 'ExploreController');
 });
 
 Route::get(
