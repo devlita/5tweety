@@ -1,5 +1,5 @@
 @component('components.master')
-    <div class="container mx-auto px-6 py-4 bg-gray-400">
+    <div class="container mx-auto px-6 py-4 bg-gray-400 rounded-lg">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -9,6 +9,20 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
+                            <div class="fo rm-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Username</label>
+
+                                <div class="col-md-6">
+                                    <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+
+                                    @if ($errors->has('name'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            
                             <div class="fo rm-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
