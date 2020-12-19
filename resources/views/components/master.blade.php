@@ -19,20 +19,22 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <section class="px-8 py-4 mb-6">
-            <header class="container mx-auto">
-                <h1>
-                    <img
-                        src="/images/logo.svg"
-                        alt="Tweety"
-                    >
-                </h1>
-            </header>
-        </section>
+    <body>
+        <div id="app">
+            <section class="px-8 py-4 mb-6">
+                <header class="container mx-auto">
+                    <h1>
+                        <img
+                            src="/images/logo.svg"
+                            alt="Tweety"
+                        >
+                    </h1>
+                </header>
+            </section>
 
-        {{ $slot }}
-    </div>
-</body>
+            {{ $slot }}
+        </div>
+
+        <script src="http://unpkg.com/turbolinks"></script>
+    </body>
 </html>
